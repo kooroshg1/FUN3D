@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Ffun3d.larc.nasa.gov%2Ffun3d_logo.png&imgrefurl=https%3A%2F%2Ffun3d.larc.nasa.gov%2F&docid=55Yhc5s7GAtE1M&tbnid=766tBlrV_j3nQM%3A&vet=1&w=380&h=136&bih=823&biw=1760&q=fun3d&ved=0ahUKEwijgdXiy5LSAhUH0IMKHUthBnAQMwgcKAAwAA&iact=mrc&uact=8#h=136&imgrc=766tBlrV_j3nQM:&vet=1&w=380", height="145.5" width="237">
+  <img src="https://github.com/kooroshg1/FUN3D/blob/master/fun3d_logo.png", height="145.5" width="237">
 </p>
 # FUN3D Tutorials
 FUN3D is a Computational Fluid Dynamics (CFD) suite of tools actively developed at NASA that benefits Aeronautics, Space Technology, and Exploration by modeling fluid flow.
