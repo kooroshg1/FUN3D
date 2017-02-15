@@ -78,12 +78,12 @@ nodet
 You can look at the results by typing `paraview lidDrivenCavity_volume_timestep1000.vtk` in the terminal. Shown below are the velocity contours from a simulation of the lid-driven cavity for a Reynolds number of one hundred using the FUN3D code.
 
 <div style="align: center; text-align:center;">
-    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/images/u-velocity.png" height="300.0" />
+    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/images/u-velocity.png" height="300.0" align="middle"/>
     <div text-align:center>U-velocity contour</div>
 </div>
 
 <div style="align: center; text-align:center;">
-    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/images/v-velocity.png" height="300.0" />
+    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/images/v-velocity.png" height="300.0" align="middle"/>
     <div text-align:center>U-velocity contour</div>
 </div>
 
@@ -91,9 +91,9 @@ You can look at the results by typing `paraview lidDrivenCavity_volume_timestep1
 You can clean this directory by typing `./remove-all` in your terminal.
 
 ## References
-Ghia, Ghia, and Shin (1982), "High-Re solutions for incompressible flow using the Navier-Stokes equations and a multigrid method", Journal of Computational Physics, Vol. 48, pp. 387-411.
+1. Ghia, Ghia, and Shin (1982), "High-Re solutions for incompressible flow using the Navier-Stokes equations and a multigrid method", Journal of Computational Physics, Vol. 48, pp. 387-411.
 
 ## Resources
-https://www.cfd-online.com/Wiki/Lid-driven_cavity_problem
-http://www.cavityflow.com/
-http://web.mit.edu/calculix_v2.7/CalculiX/ccx_2.7/doc/ccx/node14.html
+1. https://www.cfd-online.com/Wiki/Lid-driven_cavity_problem
+2. http://www.cavityflow.com/
+3. http://web.mit.edu/calculix_v2.7/CalculiX/ccx_2.7/doc/ccx/node14.html
