@@ -3,7 +3,7 @@
 The lid-driven cavity problem has long been used a test or validation case for new codes or new solution methods. The problem geometry is simple and two-dimensional, and the boundary conditions are also simple. The standard case is fluid contained in a square domain with Dirichlet boundary conditions on all sides, with three stationary sides and one moving side (with velocity tangent to the side).
 
 <p align="center">
-  <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/lid-driven-cavity-figure.png", height="300.0">
+  <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/images/lid-driven-cavity-figure.png", height="300.0">
 </p>
 
 Similar simulations have also been done at various aspect ratios, and it can also be done with the lid replaced with a moving fluid. This problem is a somewhat different situation, and is usually referred to as the shear-driven cavity. You may see the two names (lid-driven and shear-driven) used interchangeably in spite of the fact that they are distinct (and different) problems.
@@ -78,12 +78,12 @@ nodet
 You can look at the results by typing `paraview lidDrivenCavity_volume_timestep1000.vtk` in the terminal. Shown below are the velocity contours from a simulation of the lid-driven cavity for a Reynolds number of one hundred using the FUN3D code.
 
 <div style="align: center; text-align:center;">
-    <img src="white.jpg" height="31px" width="200px" />
+    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/images/u-velocity.png" height="300.0" />
     <div text-align:center>U-velocity contour</div>
 </div>
 
 <div style="align: center; text-align:center;">
-    <img src="white.jpg" height="31px" width="200px" />
+    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/images/v-velocity.png" height="300.0" />
     <div text-align:center>U-velocity contour</div>
 </div>
 
@@ -95,7 +95,5 @@ Ghia, Ghia, and Shin (1982), "High-Re solutions for incompressible flow using th
 
 ## Resources
 https://www.cfd-online.com/Wiki/Lid-driven_cavity_problem
-
 http://www.cavityflow.com/
-
 http://web.mit.edu/calculix_v2.7/CalculiX/ccx_2.7/doc/ccx/node14.html
