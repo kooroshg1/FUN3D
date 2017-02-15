@@ -1,6 +1,6 @@
  &project
     project_rootname = "lidDrivenCavity"
-    case_title = "OM6 Simple Inviscid Flow Solve Tutorial"
+    case_title = "Lid-driven cavity problem for Re = 100"
  /
 
  &governing_equations

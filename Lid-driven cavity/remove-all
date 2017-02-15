@@ -1,3 +1,3 @@
 #!/bin/bash
 shopt -s extglob
-rm !(fun3d.nml|lidDrivenCavity.nmf|lidDrivenCavity.p3d|lidDrivenCavity.ugrid|generate-lidDrivenCavity.py|convert-mesh|remove-all|lidDrivenCavity.mapbc)
+rm !(fun3d.nml|MESH-generate-lidDrivenCavity.py|convert-mesh|remove-all|README.md|FUN3D-PLOT-solution_hist.py|lid-driven-cavity-figure.png)
