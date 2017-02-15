@@ -1,0 +1,3 @@
+#!/bin/bash
+
+plot3d_to_aflr3 << 0 lidDrivenCavity 1
