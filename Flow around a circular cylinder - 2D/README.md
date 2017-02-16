@@ -32,7 +32,7 @@ You can generate a mesh by using the following syntax
 python FUN3D-MESH-cylinder.py --i 99 --j 76 --spacing 0.01 cylinder
 ```
 <div style="align: center; text-align:center;">
-    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Flow%20around%20a%20circular%20cylinder%20-%202D/images/cylinder.png" height="300.0" align="middle"/>
+    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Flow%20around%20a%20circular%20cylinder%20-%202D/images/domain.png" height="300.0" align="middle"/>
     <div text-align:center>O-grid around cylinder</div>
 </div>
 
@@ -87,7 +87,7 @@ nodet
 You can look at the results by typing `paraview cylinder_volume_timestep1000.vtk` in the terminal. Shown below are the velocity contours from a simulation of the lid-driven cavity for a Reynolds number of one hundred using the FUN3D code.
 
 <div style="align: center; text-align:center;">
-    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/images/u-velocity.png" height="300.0" align="middle"/>
+    <img src="https://github.com/kooroshg1/FUN3D/blob/master/Flow%20around%20a%20circular%20cylinder%20-%202D/images/u-velocity.png" height="300.0" align="middle"/>
     <div text-align:center>U-velocity contour</div>
 </div>
 
