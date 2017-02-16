@@ -1,0 +1,3 @@
+#!/bin/bash
+shopt -s extglob
+rm !(fun3d.nml|README.md|convert-mesh|remove-all|FUN3D-MESH-cylinder.py|FUN3D-PLOT-solution_hist.py|FUN3D-POSTPROCESS-shedding_frequency.py)
