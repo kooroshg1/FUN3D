@@ -40,7 +40,6 @@ with open(file_name) as history_file:
 
 data[:, 0] = data[:, 0] / 10
 # Calculate the shedding frequency
-print data.shape
 start_index = 150000
 dt = data[3, 0] - data[2, 0]
 fs = 1 / dt # Sampling frequency
