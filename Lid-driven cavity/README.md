@@ -84,7 +84,7 @@ You can look at the results by typing `paraview lidDrivenCavity_volume_timestep1
 
 <div style="align: center; text-align:center;">
     <img src="https://github.com/kooroshg1/FUN3D/blob/master/Lid-driven%20cavity/images/v-velocity.png" height="300.0" align="middle"/>
-    <div text-align:center>U-velocity contour</div>
+    <div text-align:center>V-velocity contour</div>
 </div>
 
 ## Cleaning Directory
