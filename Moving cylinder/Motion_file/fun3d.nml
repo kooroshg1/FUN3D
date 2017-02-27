@@ -1,0 +1,45 @@
+&project
+   project_rootname = "cylinder"
+   case_title = "Flow over cylinder"
+/
+
+&governing_equations
+   eqn_type = "incompressible"
+   viscous_terms = "laminar"
+/
+
+&reference_physical_properties
+   reynolds_number = 100
+/
+
+&code_run_control
+   steps              = 600
+   stopping_tolerance = 1.0E-15
+   restart_write_freq = 1000
+   restart_read = "off"
+/
+
+&nonlinear_solver_parameters
+   time_accuracy = "2ndorderOPT"
+   time_step_nondim = 0.1
+   subiterations = 50
+/
+
+&raw_grid
+  grid_format = "AFLR3"
+  data_format = "ascii"
+  patch_lumping = "none"
+/
+
+&global
+    volume_animation_freq = 10
+    moving_grid = .true.
+    ! grid_motion_only = .true.
+/
+
+ &volume_output_variables
+    export_to = 'vtk'
+    x = .false.
+    y = .false.
+    z = .false.
+/

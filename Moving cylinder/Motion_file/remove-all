@@ -1,0 +1,3 @@
+#!/bin/bash
+shopt -s extglob
+rm !(fun3d.nml|convert-mesh|remove-all|FUN3D-MESH-cylinder.py|moving_body.input|cylinder_motion.hst|FUN3D-write_motion_file.py)

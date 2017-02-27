@@ -1,0 +1,7 @@
+#!/bin/bash
+python FUN3D-MESH-cylinder.py --i 50 --j 50 --radius 1 --farfield 10 --spacing 0.1 cylinder
+plot3d_to_aflr3 << EOL
+0
+cylinder
+2
+EOL
