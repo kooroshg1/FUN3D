@@ -4,8 +4,9 @@ In this tutorial, I looked at the Vortex Induced Vibration (VIV) of a cylinder i
 ## Finite Element Solver
 I am using a simple truss-based FEA solver to get structural displacement for this problem. The time integration is done using the [Crank-Nicholson](https://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method) method. FEA solver uses the same time step as the CFD solver; therefore, it cannot handle structures with high natural frequencies at this time. Please note that this is just a prove of concept. This example is not intended to be run for wide variety of structural properties. The structural model is shown in the following Figure.
 
-![VIV Physical Problem][viv_physical_problem]
-[viv_physical_problem]: https://github.com/kooroshg1/FUN3D/blob/master/VIV/figure/viv_physical_problem.jpg
+<p align="center">
+  <img src="https://github.com/kooroshg1/FUN3D/blob/master/VIV/figure/viv_physical_problem.jpg", height="300.0">
+</p>
 
 ## Fluid-Structure Interaction Coupling
 Fluid–structure interaction (FSI) is the interaction of some movable or deformable structure with an internal or surrounding fluid flow. Fluid–structure interactions can be stable or oscillatory. Here, I am using the following steps to couple the CFD and FEA solvers:
