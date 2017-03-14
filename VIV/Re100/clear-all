@@ -1,0 +1,3 @@
+#!/bin/bash
+shopt -s extglob
+rm !(cylinder.mapbc|cylinder.ugrid|fun3d.nml|clear-all|cylinder_massoud_body1.dat|cylinder_body1.dat|get_displacements_from_csd|reset-cylinder-location|moving_body.input|FUN3D_FSI.py|main.py|run-fsi)
