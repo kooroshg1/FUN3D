@@ -1,8 +1,0 @@
-#!/bin/bash
-./clear-all
-./reset-cylinder-location
-touch fsi_solution_history.txt
-echo "# dt         Xc           Yc           Zc           Fx           Fy           Fz" >> fsi_solution_history.txt
-touch displacement_solution.txt
-echo "0.0000 0.000" >> displacement_solution.txt
-nodet --aeroelastic_external --read_surface_from_file

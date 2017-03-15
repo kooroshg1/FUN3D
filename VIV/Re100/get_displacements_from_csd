@@ -1,6 +1,0 @@
-#!/bin/bash
-echo "running script ..."
-rm new_surface_is_ready
-python main.py
-cp new_airloads_are_ready new_surface_is_ready
-rm new_airloads_are_ready
