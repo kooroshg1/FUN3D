@@ -40,3 +40,14 @@ To run the FSI simulation you need to run the bash scipt `run-fsi`. You may need
 sudo chmod u+x run-fsi
 ```
 `run-fsi` script will clean the directory and resets the cylinder location. It will also generate the `fsi_solution_history.txt` file for saving the solution history and initialize it. It will also assign the initial condition (initial displacement and velocity) that is used by the structural solver. `run-fsi` will then run the `nodet` solver with `--aeroelastic_external` and  `--read_surface_from_file` command line options.
+
+## Results
+The following are the results for Re = 250, structural mass = 10.0, and structural stiffness = 1.0. The nondimensional time step for the CFD solution is selected as 0.1.
+
+<p align="center">
+  <img src="https://github.com/kooroshg1/FUN3D/blob/master/VIV/figure/viv_physical_problem.jpg", height="300.0">
+</p>
+
+<p align="center">
+  <img src="https://github.com/kooroshg1/FUN3D/blob/master/VIV/figure/viv_physical_problem.jpg", height="300.0">
+</p>
