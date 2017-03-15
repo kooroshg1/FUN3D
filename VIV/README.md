@@ -14,4 +14,20 @@ Fluid–structure interaction (FSI) is the interaction of some movable or deform
 1. Solve and advance the fluid's equation one time step. Now we have the fluid's solution (pressure and velocity) at times `n` and `n+1`.
 2. Integrate pressure on the cylinder surface to calculate the aerodynamic load. For this problem, I am only transferring lift force to the structural solver.
 3. Calculate the position of the structure at time step `n+1` based on position at time `n` and loads at `n` and `n+1`. I am using Crank-Nicholson for this step.
-4. Update the location of the structure and advance fluid's solution one step.
+4. Update the location of the structure and advance fluid's solution one time step.
+
+## Specifying Aerodynamic Surfaces
+The first step is to identify the surfaces that contribute to the aerodynamic load calculation. For the case of flow over cylinder, the cylinder surface is used for calculating aerodynamic loads.
+
+I also need to write the aerodynamic surface to a text file. This file contains the coordinate and the `id` that fun3d assisgns to the said point. The aerodynamic surface file is moved at each iteration of the FSI solution based on the FEA solution. This updated surface location is used by fun3d solver as well. The aerodynamic surface is in `massoud` file format. I generate this file by adding the following lines to `fun3d.nml` file. Please note that `3` is the id of cylinder surface in `cylinder.mapbc` file.
+```
+&massoud_output
+   n_bodies = 1
+   nbndry(1) = 1
+   boundary_list(1) = '3'
+/
+```
+The massoud file is written by running the flow solver `nodet` using `--write_massoud_file` as command line option.
+
+## FUN3D Coupled Fluid-Structure Interaction Solution Requirements
+I coupled FUN3D with and external FEA solver by using the command line option (CLO) `--aeroelastic_external`. To make sure that `nodet` solver reads the updated aerodynamic surface position at each time step, I used `--read_surface_from_file` as well. `nodet` solver requires a shell script called `get_displacements_from_csd` to update the location of the aerodynamic surfaces. You need to provide this script.
