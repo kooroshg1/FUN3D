@@ -27,7 +27,7 @@ I also need to write the aerodynamic surface to a text file. This file contains 
    boundary_list(1) = '3'
 /
 ```
-The massoud file is written by running the flow solver `nodet` using `--write_massoud_file` as command line option.
+The massoud file is written by running the flow solver `nodet` using `--write_massoud_file` as command line option. Please note that this step is not required for the this case since I have already did that and you have the file.
 
 ## FUN3D Coupled Fluid-Structure Interaction Solution
 I coupled FUN3D with and external FEA solver by using the command line option (CLO) `--aeroelastic_external`. To make sure that `nodet` solver reads the updated aerodynamic surface position at each time step, I used `--read_surface_from_file` as well. `nodet` solver requires a shell script called `get_displacements_from_csd` to update the location of the aerodynamic surfaces. You need to provide this script.
