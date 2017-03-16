@@ -1,4 +1,4 @@
-## Transient Fluid-Structure Analysis with FUN3D
+## Transient Fluid-Structure Interaction Analysis with FUN3D
 In this tutorial, I looked at the Vortex Induced Vibration (VIV) of a cylinder in cross flow. In fluid dynamics, vortex induced vibrations are motions induced on bodies interacting with an external fluid flow, produced by – or the motion producing – periodical irregularities on this flow. This tutorial is my first attempt on solving the coupled fluid-structure interaction problem by coupled FUN3D with an external FEA solver.
 
 ## Finite Element Solver
