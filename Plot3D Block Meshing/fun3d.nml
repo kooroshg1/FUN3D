@@ -1,0 +1,41 @@
+ &project
+    project_rootname = "block"
+    case_title = "OM6 Simple Inviscid Flow Solve Tutorial"
+ /
+
+ &governing_equations
+    eqn_type = "incompressible"
+    viscous_terms = "laminar"
+ /
+
+ &reference_physical_properties
+    reynolds_number = 100
+ /
+
+ &code_run_control
+    steps              = 1000
+    stopping_tolerance = 1.0E-15
+    restart_write_freq = 100
+    restart_read = "off"
+ /
+
+ &raw_grid
+   grid_format = "AFLR3"
+   data_format = "ascii"
+   patch_lumping = "none"
+ /
+
+ &global
+     volume_animation_freq = 200
+ /
+
+  &volume_output_variables
+     export_to = 'vtk'
+     x = .false.
+     y = .false.
+     z = .false.
+ /
+
+ &boundary_conditions
+    wall_velocity(6,1) = 1.0
+ /
