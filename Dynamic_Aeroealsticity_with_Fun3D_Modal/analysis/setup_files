@@ -1,0 +1,10 @@
+#!/bin/bash
+shopt -s extglob
+clear && printf '\e[3J'
+rm -r !(setup_files)
+cp ../mesh/cylinder.mapbc ./
+cp ../mesh/cylinder.ugrid ./
+cp ../modes/cylinder_body1_mode1.dat ./
+cp ../fun3d/fun3d.nml ./
+cp ../fun3d/moving_body.input ./
+cp ../scripts/run_aeroelastic_internal ./
