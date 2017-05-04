@@ -1,0 +1,6 @@
+#!/bin/bash
+shopt -s extglob
+clear && printf '\e[3J'
+rm -rf !(setup_files)
+cp -r ../fea_files/* ./
+cp -r ../fun3d_files/* ./

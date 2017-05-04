@@ -1,0 +1,4 @@
+#!/bin/bash
+clear && printf '\e[3J'
+./reset-cylinder-location
+nodet --aeroelastic_external --read_surface_from_file

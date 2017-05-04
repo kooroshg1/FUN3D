@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+
+while [ ! -f fea_finished ]
+do
+  sleep 1
+done
+rm fea_finished
+touch new_surface_is_ready
