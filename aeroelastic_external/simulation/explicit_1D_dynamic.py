@@ -32,39 +32,41 @@ Fn = 0.
 un = 0.
 udotn = 0.2
 dddotn = 0.
-with open('solution.txt', 'w') as solution_file:
-    for it in range(0, nt - 1):
-        if os.path.exists('new_surface_is_ready'):
-            os.remove('new_surface_is_ready')
-        t = it * dt
-        F, current_time, Fnp1 = update_load()
-        # Forward Euler
-        # foo = (A.dot(X[:, it].reshape(-1, 1)) + (Fn + Fnp1) / 2.0) * dt + X[:, it].reshape(-1, 1)
-        # fun3d.update_surface(dispz=foo[0, 0])
-        # Fn = Fnp1
-        # X[0, it + 1] = foo[0, 0]
-        # X[1, it + 1] = foo[1, 0]
-        # print "Time = ", current_time, ", disp = ", foo[0, 0], ", vel = ", foo[1, 0], ", Fz = ", Fn
+for it in range(0, nt - 1):
+    if os.path.exists('new_surface_is_ready'):
+        os.remove('new_surface_is_ready')
+    t = it * dt
+    F, current_time, Fnp1 = update_load()
+    # Forward Euler
+    # foo = (A.dot(X[:, it].reshape(-1, 1)) + (Fn + Fnp1) / 2.0) * dt + X[:, it].reshape(-1, 1)
+    # fun3d.update_surface(dispz=foo[0, 0])
+    # Fn = Fnp1
+    # X[0, it + 1] = foo[0, 0]
+    # X[1, it + 1] = foo[1, 0]
+    # print "Time = ", current_time, ", disp = ", foo[0, 0], ", vel = ", foo[1, 0], ", Fz = ", Fn
 
-        # Newmark beta
-        beta = 1. / 4.
-        gamma = 1. / 2.
-        uddotn = (Fn - k * un) / m
-        Kprime = k + 1. / (beta * dt ** 2.) * m
-        Fprimenp1 = Fnp1 + m / (beta * dt ** 2.0) * (un + dt * udotn + (1. / 2. - beta) * dt ** 2.0 * uddotn)
-        unp1 = Fprimenp1 / Kprime
-        uddotnp1 = 1. / (beta * dt ** 2.0) * (unp1 - un - dt * udotn - dt ** 2.0 * (1. / 2. - beta) * uddotn)
-        udotnp1 = udotn + dt * ((1 - gamma) * uddotn + gamma * uddotnp1)
-        Fn = Fnp1
-        un = unp1
-        udotn = udotnp1
-        uddotn = uddotnp1
-        fun3d.update_surface(dispz=unp1)
-        print "Time = ", current_time, ", disp = ", unp1, ", vel = ", udotnp1, ", Fz = ", Fnp1
-        X[0, it + 1] = unp1
-        X[1, it + 1] = udotnp1
-        solution_file.write("{:<8.6f} {:<8.6f} {:<8.6f} {:<8.6f}".format(float(current_time), unp1, udotnp1, Fnp1))
+    # Newmark beta
+    beta = 1. / 4.
+    gamma = 1. / 2.
+    uddotn = (Fn - k * un) / m
+    Kprime = k + 1. / (beta * dt ** 2.) * m
+    Fprimenp1 = Fnp1 + m / (beta * dt ** 2.0) * (un + dt * udotn + (1. / 2. - beta) * dt ** 2.0 * uddotn)
+    unp1 = Fprimenp1 / Kprime
+    uddotnp1 = 1. / (beta * dt ** 2.0) * (unp1 - un - dt * udotn - dt ** 2.0 * (1. / 2. - beta) * uddotn)
+    udotnp1 = udotn + dt * ((1 - gamma) * uddotn + gamma * uddotnp1)
+    Fn = Fnp1
+    un = unp1
+    udotn = udotnp1
+    uddotn = uddotnp1
+    fun3d.update_surface(dispz=unp1)
+    print "Time = ", current_time, ", disp = ", unp1, ", vel = ", udotnp1, ", Fz = ", Fnp1
+    X[0, it + 1] = unp1
+    X[1, it + 1] = udotnp1
 
-        surface_file = open('fea_finished', 'w')
-        surface_file.write(current_time)
-        surface_file.close()
+    solution_file = open('solution.txt', 'a')
+    solution_file.write("{:<8.6f}\t{:<8.6f}\t{:<8.6f}\t{:<8.6f}\n".format(float(current_time), unp1, udotnp1, Fnp1))
+    solution_file.close()
+
+    surface_file = open('fea_finished', 'w')
+    surface_file.write(current_time)
+    surface_file.close()

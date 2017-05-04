@@ -32,7 +32,7 @@
  /
 
  &global
-     volume_animation_freq = 1
+     volume_animation_freq = 10
      moving_grid = .true.
  /
 
